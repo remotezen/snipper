@@ -1,0 +1,69 @@
+Setup your git environment
+=============================
+##############################
+
+git config --global user.name "Your Name"
+git config --global user.email your.email@example.com
+ 
+git config --global alias.co checkout
+git config --global core.editor "mvim -f"
+
+GitHub
+-------
+#######
+
+git remote add origin git@github.com:<username>/first_app.git
+git push -u origin master
+
+git commands
+_______________
+##############
+
+create new branch
+_________________
+ 
+git co [ checkout] -b new branch name
+
+git mv name.old name.new
+
+git co master
+git merge branch
+
+Delete branch
+________________
+
+git branch -D branch 
+git push
+
+
+heroku
+_______
+
+keroku keys:add
+heroku create --stack cedar
+git push heroku master
+
+heroku open
+heroku logs -n 50a
+heroku run rake db:migrate
+
+*********must move sqilte to development test block
+in Gemfile
+***********Then repush to heroku*************
+git add Gemfile
+git commit -m "Removed sqlite3 from Gemfile"
+git push heroku master
+
+
+Rails notes
+______________
+###############
+for pg
+bundle install --without production
+
+Devise
+______________
+#################
+
+rails generate devise User
+
