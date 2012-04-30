@@ -68,3 +68,7 @@ ______________
 
 rails generate devise User
 
+Rspec
+_____________
+rails g rspec:install
+

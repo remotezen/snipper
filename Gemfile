@@ -3,10 +3,10 @@ gem 'rails', '3.2.3'
 gem 'devise'
 gem 'juggernaut'
 group :test do
-  gem 'rspec-rails', '2.9.0'
 end
 group :development, :test do
   gem 'sqlite3'
+  gem 'rspec-rails', '2.9.0'
 
 end
 
