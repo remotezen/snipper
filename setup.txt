@@ -84,3 +84,4 @@ __________
 ++++++++++++
 
 bundle exec guard init rspec
+bundle exec guard
