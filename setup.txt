@@ -79,4 +79,8 @@ __________
 
 rails g integration_test ie static_pages
 
+Guard
+__________
+++++++++++++
 
+bundle exec guard init rspec
