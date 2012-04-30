@@ -3,6 +3,7 @@ gem 'rails', '3.2.3'
 gem 'devise'
 gem 'juggernaut'
 group :test do
+  gem 'capybara','1.1.2'
 end
 group :development, :test do
   gem 'sqlite3'

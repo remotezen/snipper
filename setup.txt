@@ -70,5 +70,13 @@ rails generate devise User
 
 Rspec
 _____________
+++++++++++++++++
 rails g rspec:install
+
+
+Integration tests
+__________
+
+rails g integration_test ie static_pages
+
 
