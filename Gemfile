@@ -14,7 +14,7 @@ group :development, :test do
   gem 'guard-rspec', '0.5.5'
   gem 'sqlite3'
   gem 'growl', '1.0.3'
-  gem 'annotate'
+   gem 'annotate', '~> 2.4.1.beta'
 end
 
 gem 'heroku'
