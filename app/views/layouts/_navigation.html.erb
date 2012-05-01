@@ -6,15 +6,15 @@
         <%= link_to @config[:main_page ][:application_name], main_app.root_path %>
         
       </h3>
-      <ul class="nav">
+      <ul class="nav tabs pull-right">
         <li>
           <%=link_to "Home", main_app.root_path  %>
         </li>
         <li>
-          <%=link_to "Help", main_app.static_pages_help_path  %>
+          <%=link_to "Help", main_app.help_path  %>
         </li>
         <li>
-          <%=link_to "About", main_app.static_pages_about_path  %>
+          <%=link_to "About", main_app.about_path  %>
         </li>
         <li><a href="#">Link</a></li>
         <li><a href="#">Link</a></li>

@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'bootstrap';
+//========================start of fonts=================
+@font-face{ font-family: "BacktoSchool";
+  src: asset-url( 'BackToSchool.ttf',font) format( 'truetype');
+}
+//==================================end of fonts==========
 ul.nav li.dropdown:hover ul.dropdown-menu{
     display: block;    
 }
@@ -57,4 +62,21 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+}
+#home_main{ 
+  font-family: BacktoSchool;
+  margin: auto 0;
+  padding-top:40px;
+  font-size: 2em;
+  text-align:center;
+  background-color:#0088cc;
+  color:#ffD500;
+}
+.home-main-top-text{ 
+  font-family:arial;
+  font-size:.9em;
+  color: #CCC;
+  margin: auto 0;
+  text-align:center;
+  
 }
