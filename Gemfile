@@ -7,6 +7,8 @@ group :test do
   gem 'rb-fsevent', '0.4.3.1', :require => false
   gem 'guard-spork', '0.3.2'
   gem 'spork', '0.9.0'
+  gem 'factory_girl_rails', '1.4.0'
+  gem  'database_cleaner'
 end
 
 group :development, :test do
@@ -34,4 +36,5 @@ gem "haml-rails", ">= 0.3.4", :group => :development
 gem "bootstrap-sass", ">= 2.0.1"
 gem "rails-footnotes", ">= 3.7", :group => :development
 gem "will_paginate", ">= 3.0.3"
+gem "ruby-git"
 

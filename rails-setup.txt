@@ -46,6 +46,7 @@ git push heroku master
 heroku open
 heroku logs -n 50a
 heroku run rake db:migrate
+heroku run console
 
 *********must move sqilte to development test block
 in Gemfile

@@ -1,8 +1,13 @@
+<%=provide( :title, "Sign up")  %>
 <h2>Sign up</h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
+  <div><%= f.label :name %><br />
+  <%= f.text_field :name %></div>
+  <div><%= f.label :user_name %><br />
+  <%= f.text_field :user_name %></div>
   <div><%= f.label :email %><br />
   <%= f.email_field :email %></div>
 

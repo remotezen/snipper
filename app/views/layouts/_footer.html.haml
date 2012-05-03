@@ -3,6 +3,10 @@
     %nav
       %ul
         %li
-          =link_to "Not a member yet ? Sign up!", root_path
-        %li
-          =link_to "About", about_path
+          -unless user_signed_in?
+            =link_to "Not a member yet ? Sign up!", signup_path 
+  .pull-right.footer-list      
+    %ul
+      %li=link_to "About", about_path
+      %li=link_to "contact", contact_path 
+          
