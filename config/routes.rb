@@ -10,7 +10,7 @@ Snipper::Application.routes.draw do
   match '/contact', :to => "static_pages#contact"
   match '/about', :to => "static_pages#about"
   get "static_pages/help"
-  match "/profile/:id", :to => "users#show"
+  match "/profile/:id", :to => "users#show", as: "profile"
   
 
   #match '/show/'
