@@ -33,6 +33,9 @@ GEM
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
     bootstrap-sass (2.0.2)
+    bootstrap-tooltip-rails (0.1)
+      rails (>= 3.1)
+      thor
     builder (3.0.0)
     capybara (1.1.2)
       mime-types (>= 1.16)
@@ -194,6 +197,7 @@ PLATFORMS
 DEPENDENCIES
   annotate (~> 2.4.1.beta)
   bootstrap-sass (>= 2.0.1)
+  bootstrap-tooltip-rails
   capybara (= 1.1.2)
   coffee-rails (~> 3.2.1)
   database_cleaner

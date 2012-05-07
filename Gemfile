@@ -37,4 +37,5 @@ gem "bootstrap-sass", ">= 2.0.1"
 gem "rails-footnotes", ">= 3.7", :group => :development
 gem "will_paginate", ">= 3.0.3"
 gem "ruby-git"
+gem 'bootstrap-tooltip-rails'
 

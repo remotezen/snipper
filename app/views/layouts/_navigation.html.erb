@@ -6,7 +6,7 @@
         <%= link_to @config[:main_page ][:application_name], main_app.root_path %>
         
       </h3>
-      <ul class="nav nav-pills pull-right">
+      <ul class="nav nav-pills pull-right" id="nav">
         <li>
         <%=link_to "Home", main_app.root_path  %>
         </li>
@@ -19,15 +19,15 @@
         <li>
           <%=link_to "Contact", main_app.contact_path  %>
         </li>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle">Dropdown</a>
+          <a href="#" class="dropdown-toggle" rel="tooltip" title="Your personal area">User</a>
           <ul class="dropdown-menu">
-            <li><a href="#">Secondary link</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Another link</a></li>
+          <%if user_signed_in?%>
+              <li><%=link_to "Profile", profile_path( current_user), class:"menu-item-1", rel:"tooltip" , title:"Edit your personal preference"%></li>
+              <li><%=link_to "sign out", signout_path, rel: "tooltip", title: "Logout out of your current session" %></li>
+            <%else%>
+              <li><%=link_to "sign in", signin_path, rel: "tooltip", title: "Login to and join the action" %></li>
+            <%end %>
           </ul>
         </li>
       </ul>

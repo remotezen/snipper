@@ -4,4 +4,5 @@
   Snipper Social Networking whats on your mind?
   %span.home-main-top-text
 .signup
-  =link_to "Sign up", root_path, :class => "btn btn-large btn-primary"
+  %p
+    =link_to "Sign up", root_path, :class => "btn btn-large btn-primary" unless user_signed_in?

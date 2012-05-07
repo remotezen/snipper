@@ -18,6 +18,8 @@ Snipper::Application.routes.draw do
   devise_scope :user do
     match '/signin', :to => "devise/sessions#new"
     match '/signup', :to =>"devise/registrations#new"
+    match '/signout', :to => "devise/sessions#destroy"
+    match '/user_edit/:id', :to=> "devise/registrations#edit",  as:"user_edit"
   end
   
 

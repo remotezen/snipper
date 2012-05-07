@@ -74,3 +74,16 @@ $grayMediumLight: #eaeaea;
   @extend .control-group;
   @extend .error;
  }
+ .tooltip {
+    display:none;
+    font-size:12px;
+    background-image:url  asset-url( "white_big.png", image);
+    height:70px;
+    width:160px;
+    padding:25px;
+    color:#eee;
+  }
+  .menu-item-1{ 
+    z-index:1001;
+    position:relative;
+  }
