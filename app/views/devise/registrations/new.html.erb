@@ -11,15 +11,16 @@
       <%= f.text_field :user_name %></div>
       <div><%= f.label :email %><br />
       <%= f.email_field :email %></div>
-
       <div><%= f.label :password %><br />
-      <%= f.password_field :password %></div>
+        <%= f.password_field :password%></div>
 
-      <div><%= f.label :password_confirmation %><br />
+      <div><%= f.label :password_confirmation%><br />
       <%= f.password_field :password_confirmation %></div>
+    <br>
 
       <div><%= f.submit "Create my account", class:"btn btn-large btn-primary" %></div>
     <% end %>
+    <br>
 
     <%= render "links" %>
   </div>

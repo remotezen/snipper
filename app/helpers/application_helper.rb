@@ -8,4 +8,11 @@ module ApplicationHelper
     end
   
   end
+  def correct_user
+    @user = User.find( params[ :id])
+    redirect_to( root)
+  end
+  def this_user?( user)
+    user == current_user
+  end
 end

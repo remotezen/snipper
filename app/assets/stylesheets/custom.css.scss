@@ -87,3 +87,28 @@ $grayMediumLight: #eaeaea;
     z-index:1001;
     position:relative;
   }
+  .all-users-list > li{ 
+   list-style-type:none;
+  }
+  .users{ 
+    list-style:none;
+    margin: 0;
+    li{ 
+      &:first-child{ 
+        border-top: 1px solid #ccc;
+      }
+      overflow: auto;
+      padding: 10px 0;
+      border-top: 1px solid #ccc;
+      &:last-child{ 
+        border-bottom: 1px solid #ccc;
+      }
+    }
+  }
+  .odd{ 
+    background-color:#ddd;
+  }
+  .even{ 
+    background-color:#aaa;
+  }
+

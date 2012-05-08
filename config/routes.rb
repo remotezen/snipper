@@ -1,7 +1,5 @@
 Snipper::Application.routes.draw do
-  get "users/show"
-
-  get "users/index"
+  resources :users
 
   get "static_pages/home"
   get "static_pages/about"

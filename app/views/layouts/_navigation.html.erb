@@ -10,21 +10,14 @@
         <li>
         <%=link_to "Home", main_app.root_path  %>
         </li>
-        <li>
-          <%=link_to "Help", main_app.help_path  %>
-        </li>
-        <li>
-          <%=link_to "About", main_app.about_path  %>
-        </li>
-        <li>
-          <%=link_to "Contact", main_app.contact_path  %>
-        </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" rel="tooltip" title="Your personal area">User</a>
           <ul class="dropdown-menu">
           <%if user_signed_in?%>
-              <li><%=link_to "Profile", profile_path( current_user), class:"menu-item-1", rel:"tooltip" , title:"Edit your personal preference"%></li>
-              <li><%=link_to "sign out", signout_path, rel: "tooltip", title: "Logout out of your current session" %></li>
+              <li><%=link_to "Profile", profile_path( current_user), class:"menu-item-1", rel:"tooltip" , title:"Your personal details"%></li>
+              <li><%=link_to "Edit your profile", edit_user_registration_path( current_user), rel: "tooltip", title: "Logout out of your current session" %></li>
+              <li><%=link_to "Sign out", signout_path, rel: "tooltip", title: "Logout out of your current session" %></li>
+              <li><%=link_to "All Users", users_path, rel: "tooltip", title: "Logout out of your current session" %></li>
             <%else%>
               <li><%=link_to "sign in", signin_path, rel: "tooltip", title: "Login to and join the action" %></li>
             <%end %>

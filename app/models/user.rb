@@ -22,17 +22,35 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, 
+         :validatable, :authentication_keys => [ :login]
+        
 
   # Setup accessible (or protected) attributes for your model
+  attr_accessor :login
+  
   attr_accessible :email, :user_name, :password, 
-    :name, :password_confirmation, :remember_me
+    :name, :password_confirmation, :remember_me, :login
+  
   validates :name, presence: true, length: { maximum: 50}
-  validates :user_name, presence: true, length:{ within:3..15}
+  
+  validates :user_name, presence: true, length:{ within:3..30},
+    uniqueness: { case_sensitive: false }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, 
     format: { with:VALID_EMAIL_REGEX},
     uniqueness: { case_sensitive: false}
   before_save { |u| u.email = email.downcase}
   # attr_accessible :title, :body
+  # def
+  def self.find_first_by_auth_conditions( warden_conditions)
+    conditions = warden_conditions.dup
+    if login = conditions.delete( :login)
+      where( conditions).where( 
+      [ "lower( user_name) = :value or lower( email) = :value",
+        { :value => login.downcase}]).first
+    else
+      where( conditions).first
+    end
+  end
 end

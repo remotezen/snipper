@@ -8,3 +8,6 @@ $(document).ready ->
   $(->
     $('.dropdown-toggle').dropdown()
   )  
+  $(->
+    $('.dropdown-toggle').dropdown()
+  )  
