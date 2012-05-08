@@ -1,5 +1,4 @@
 Snipper::Application.routes.draw do
-  resources :users
 
   get "static_pages/home"
   get "static_pages/about"
@@ -9,6 +8,9 @@ Snipper::Application.routes.draw do
   match '/about', :to => "static_pages#about"
   get "static_pages/help"
   match "/profile/:id", :to => "users#show", as: "profile"
+  get "users/index"
+  match "/remove/:id", :to => "users#destroy", as: "remove"
+  
   
 
   #match '/show/'

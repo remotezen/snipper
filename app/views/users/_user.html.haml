@@ -2,5 +2,5 @@
   =gravatar_for( user, { size:"30x30"} )
   =user.name
   -if current_user.admin? && !this_user?( user)
-    =link_to "delete", user, method: :delete, confirm: "You sure?"
+    =link_to "delete", remove_path( user), method: :delete, confirm: "You sure?"
   
