@@ -11,3 +11,8 @@ $(document).ready ->
   $(->
     $('.dropdown-toggle').dropdown()
   )  
+$( document).ready ->
+  $("#micropost_content").charCount
+  allowed: 72
+  warning: 68
+  counterText: "Characters left: "

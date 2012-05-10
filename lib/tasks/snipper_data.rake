@@ -1,4 +1,3 @@
-require 'faker'
 namespace :db do
   desc "Fill database with sample data"
   task populate: :environment do
@@ -17,6 +16,11 @@ namespace :db do
                    email: email,
                    password: password,
                    password_confirmation: password)
+    end
+    users = User.all
+    50.times do
+      content = Faker::Lorem.sentence(25)
+      users.each{ |u| u.microposts.create!( content: content)}
     end
   end
 end

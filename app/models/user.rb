@@ -28,6 +28,7 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessor :login
+  #has_secure_password
   
   attr_accessible :email, :user_name, :password, 
     :name, :password_confirmation, :remember_me, :login
@@ -43,6 +44,11 @@ class User < ActiveRecord::Base
   before_save { |u| u.email = email.downcase}
   # attr_accessible :title, :body
   # def
+  #******************MICROPOSTS*****************************
+  #========================================================
+  has_many :microposts, dependent: :destroy
+
+  #==============END OF MICROPOSTS
   def self.find_first_by_auth_conditions( warden_conditions)
     conditions = warden_conditions.dup
     if login = conditions.delete( :login)
@@ -52,5 +58,8 @@ class User < ActiveRecord::Base
     else
       where( conditions).first
     end
+  end
+  def feed
+    Micropost.where( "user_id = ?", id)
   end
 end

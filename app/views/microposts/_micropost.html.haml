@@ -1,0 +1,11 @@
+%li{ :class => cycle( 'micropost-even', 'micropost-odd') }
+  %span.micropost-content
+    =wrap( micropost.content)
+    %br  
+    %span.micropost-timestamp
+      =time_ago_in_words( micropost.created_at)
+    %span.micropost-delete  
+      -if current_user?(micropost.user)
+        =link_to "delete", micropost, method: :delete,
+                                      confirm: "You sure?",
+                                      title: micropost.content

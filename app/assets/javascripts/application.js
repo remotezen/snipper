@@ -13,5 +13,6 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require bootstrap/bootstrap-tooltip
+//= require charCount
 //= require pschecker
 //= require_tree .

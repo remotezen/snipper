@@ -1,0 +1,10 @@
+=form_for( @micropost) do |f|
+  =render 'shared/error_messages', object: f.object
+  .objectfield 
+    =f.text_area :content, size: "30X10", placeholder: "Compose new micropost..."
+    %p.help-inline
+    %span.counter
+      %p.help-block
+        %strong 
+          Note: Please try to keep this under 72 characters long
+  =f.submit "Post", class: "btn btn-large btn-primary"

@@ -1,0 +1,7 @@
+=link_to gravatar_for( current_user, { size: "30x30"})
+%h3= link_to current_user.name, profile_path( current_user)
+%span
+  =link_to "view my profile", profile_path( current_user)
+%span  
+  =link_to pluralize( current_user.microposts.count, "micropost"), profile_path( current_user)
+
