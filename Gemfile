@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.3'
 gem 'devise'
 gem 'juggernaut'
+gem 'faker', '1.0.1'
 group :test do
   gem 'capybara','1.1.2'
   gem 'rb-fsevent', '0.4.3.1', :require => false
@@ -17,7 +18,6 @@ group :development, :test do
   gem 'sqlite3'
   gem 'growl', '1.0.3'
    gem 'annotate', '~> 2.4.1.beta'
-   gem 'faker', '1.0.1'
 end
 
 gem 'heroku'

@@ -12,7 +12,11 @@ $(document).ready ->
     $('.dropdown-toggle').dropdown()
   )  
 $( document).ready ->
-  $("#micropost_content").charCount
-  allowed: 72
-  warning: 68
-  counterText: "Characters left: "
+  $("[countable]").charcounter
+  limit: 140
+  warning: 15
+  warningClass: "label-warning"
+  exceededClass: "label-important"
+  defaultClass: "label-info"
+  notAllowOverflow: true
+  fontSize: "1.4em"
