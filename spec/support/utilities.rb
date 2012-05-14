@@ -1,3 +1,4 @@
+
 def full_title(page_title)
   base_title = "Snipper"
   if page_title.empty?

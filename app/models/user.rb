@@ -51,6 +51,8 @@ class User < ActiveRecord::Base
   #==============END OF MICROPOSTS
   #***********************Relationship****************
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
+  has_many :followed_users, through: :relationships, source: :followed
+  #============END OF RELATIONSHP==================
   
   #***************************************************
   def self.find_first_by_auth_conditions( warden_conditions)
@@ -65,5 +67,14 @@ class User < ActiveRecord::Base
   end
   def feed
     Micropost.where( "user_id = ?", id)
+  end
+  def following?( other_user)
+    relationships.find_by_followed_id( other_user.id)
+  end 
+  def follow!( other_user)
+    relationships.create!( followed_id: other_user.id)
+  end
+  def unfollow!( other_user)
+    relationships.find_by_followed_id( other_user).destroy
   end
 end
