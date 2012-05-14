@@ -49,6 +49,10 @@ class User < ActiveRecord::Base
   has_many :microposts, dependent: :destroy
 
   #==============END OF MICROPOSTS
+  #***********************Relationship****************
+  has_many :relationships, foreign_key: "follower_id", dependent: :destroy
+  
+  #***************************************************
   def self.find_first_by_auth_conditions( warden_conditions)
     conditions = warden_conditions.dup
     if login = conditions.delete( :login)
