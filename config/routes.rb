@@ -12,6 +12,12 @@ Snipper::Application.routes.draw do
   get "users/index"
   match "/remove/:id", :to => "users#destroy", as: "remove"
   resources :microposts, only: [ :create, :destroy]
+  resources :relationships, only: [ :create, :destroy]
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   
   
 

@@ -1,12 +1,12 @@
 -provide( :title, @user.user_name)
 .row
-  %h6= @user.user_name
   .show-user
     %ul
       %li=gravatar_for @user
       %h3= @user.user_name
     %aside
     .span8.pull-right  
+      =render 'follow_form' if signed_in?
       -if @user.microposts.any?
         %h3
           Microposts

@@ -1,3 +1,9 @@
+Factory.sequence :email do |n|
+  "test#{n}@example.com"
+end
+Factory.sequence :user_name do |n|
+  "#{n}---grit"
+end
 FactoryGirl.define do
   factory :user do
     name "Fred Hudson"

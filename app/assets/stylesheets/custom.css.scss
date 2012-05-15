@@ -155,10 +155,15 @@ $grayMediumLight: #eaeaea;
          border-top:$micropostBordercolor 1px solid
 
        }
+       opacity: 60;
      }
    }
    span.micropost-timestamp{ 
-     font-family: .9em arial;
+     font-family: arial;
+     font-size: .6em;
+     font-style: italic;
+     opacity: 40;
+
    }
    span.micropost-content{ 
      font: .8em QuickSand;
@@ -176,5 +181,29 @@ $grayMediumLight: #eaeaea;
      border:  1px solid #440000;
      padding:4px;
    }
+   section{ 
+     margin-bottom:8px;
+   }
     
+.profile-link{ 
+  margin-bottom:8px
+}
+.user-name{ 
+  margin-bottom:8px;
+}
 
+.time-logged-in{ 
+  margin-top:8px;
+  border-bottom:dotted #0088cc 2px;
+
+  padding:8px;
+  color:#0088cc;
+}
+ol.microposts{ 
+  border-left:solid  #0088cc 2px;
+  margin-left:12px;
+  
+}
+.feed-item{ 
+  margin-left: 12px;
+}

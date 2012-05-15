@@ -1,7 +1,14 @@
+%h3.user-name
 =link_to gravatar_for( current_user, { size: "30x30"})
-%h3= link_to current_user.name, profile_path( current_user)
-%span
+= link_to current_user.name, profile_path( current_user)
+%br
+%span.profile-link
   =link_to "view my profile", profile_path( current_user)
 %span  
   =link_to pluralize( current_user.microposts.count, "micropost"), profile_path( current_user)
+%br
+.time-logged-in  
+  =current_user.user_name
+  has been signed in for
+  =time_ago_in_words( current_user.current_sign_in_at)
 

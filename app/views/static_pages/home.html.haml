@@ -1,5 +1,4 @@
 -provide( :title, 'Home')
-%h6 Home
 #home_main
   Snipper Social Networking whats on your mind?
   %span.home-main-top-text
@@ -8,5 +7,6 @@
     =link_to "Sign up", root_path, :class => "btn btn-large btn-primary" unless user_signed_in?
 -if user_signed_in?
   =render 'shared/signed_in'
+  =render 'shared/stats'
 -else
   render 'shared/not_signed_in'
